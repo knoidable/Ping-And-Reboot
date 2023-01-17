@@ -5,7 +5,7 @@ I wrote this in early 2009. The gaming community I was involved with at that tim
 
 The server had an APC networked power outlet that we could control via telnet to cycle power. Easy enough to do, but if any of the admins were unavailable to bounce the box it could stay offline for hours. 
 
-This situation being less than optimal, I exercised my Google-Fu and put together this script in Perl to ping the box and reboot it if necessary. Why Perl? I have no earthly clue. Everything else we did was in PHP, so perhaps I was feeling particularly masochistic that day. I do remember feeling that Perl was a completely bewildering language, but despite that the end result is sufficiently readable.
+This situation being less than optimal, I exercised my Google-Fu and put together this script in Perl to ping the box and reboot it if necessary. Why Perl? I have no earthly clue. Everything else we did was in PHP, so perhaps I was feeling particularly masochistic that day. I do remember feeling that Perl was a completely bewildering language, but in spite of that that the end result is sufficiently readable.
 
 I don't remember which APC model it was, but the interface was menu-based rather than command based. While trying to find the model today I did learn that you can enter a command based interface by adding a -c flag when you telnet into the unit. Had I known that at the time, there would've been much less trial-and-error involved in putting this together.
 
