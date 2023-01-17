@@ -1,6 +1,23 @@
 #!/usr/bin/perl
-# Copyright 2009 Sam Powis
-#.....................
+# ping-and-reboot
+# Copyright (c) 2009 Sam Powis
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see https://www.gnu.org/licenses/gpl-3.0.html
+#
+# @name ping-and-reboot.sh
+# @version 2009-03-17
+# @summary Ping a server; reboot it if no response
 
 use strict;
 use Net::Telnet; 
@@ -59,7 +76,7 @@ sub Reboot{
 
 sub Log(\@){
 	my($status) = @_;
-	open LOG, "+>>", "j2mon_$LogTime.log" or die $!;
+	open LOG, "+>>", "pnr_$LogTime.log" or die $!;
 	my $i=0;
 	foreach my $server (@servers) {
 		print LOG "| $theTime | $server | @{$status}[$i] |\n";
