@@ -82,7 +82,7 @@ sub Log(\@){
 		print LOG "| $theTime | $server | @{$status}[$i] |\n";
 		$i++;
 	}
-	close(LOG);	
+	close(LOG);
 }
 
 sub PingServer(\@){
